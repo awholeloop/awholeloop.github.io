@@ -40,13 +40,16 @@
 }
 #twtr{
 	width: 45px;
-	margin-left: 10em;
+	 	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+
 }
 #fb{
 	width: 45px;
-	margin-left: 40em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	 	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
