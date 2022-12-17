@@ -1,0 +1,52 @@
+.body {
+	align-items: center;
+	margin: auto;
+	width: fit-content;
+}
+#title {
+	font-size: 200px;
+	text-align: center;
+}
+
+ #sub-title {
+	font-size: 50px;
+	text-align: center;
+	margin-top: -2em;
+	opacity: 50%;
+}
+#book{
+ 	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 500px;
+  	border-radius: 50px;
+}
+.box{
+	box-sizing: border-box;
+    height: auto;
+    width: auto;
+    border-radius: 35px;
+    box-shadow: 0 35px 80px rgb(0 0 0 / 15%);
+    background: lightgrey;
+    margin-top: 4em;
+}
+#text{
+	text-align: center;
+	font-size: 40px;
+}
+#sub-text{
+	text-align: center;
+	font-size: 25px;
+}
+#twtr{
+	width: 45px;
+	margin-left: 10em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#fb{
+	width: 45px;
+	margin-left: 40em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
