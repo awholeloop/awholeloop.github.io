@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<title>Whole Loop</title>
 	<link rel="icon" href="logo.PNG" type="image/icon type">
@@ -16,7 +17,11 @@
 
 <div class="box"><h1 id="text">About Ahmed Meftah(me):<br></h1><h2 id="sub-text">barely a writer but he got his path into that magnificent world with zest<br>he's a thinker and also a computer scientist <br>I wrote that little novel for this society and to wake people up from their delusions<br><br></h2></div>
 
-<a href="novel.html" style="font-size: 40px;"><button  class="button">Read</button></a>
+<a href="novel.html" style="font-size: 60px;"><button  class="button">Read</button></a>
+<h1 style="font-size: 75px;">chapter 2: illusion</h1>
+<h1 id="demo" style="font-size: 50px;margin-top: 1em;"></h1>
+
+
 
 <div class="box">
 
@@ -28,8 +33,37 @@
 
 </div>
 
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 27, 2022 15:37:25").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
 
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "would you wait a bit the writer may be occupied";
+  }
+}, 1000);
+</script>
+<div class="pay"><h1>we write you free so donate us fee</h1><br><a href="donate-us.html"><img src="donate.png" style="width: 100px;"></a></div>
 
 <div class="box"><a href="https://twitter.com/RResist1" target=”_blank”><img src="twtr.png" id="twtr"></a>
 <a href="https://www.facebook.com/ahmed.mefteh00" target=”_blank”><img src="fb.png" id="fb"></a>
