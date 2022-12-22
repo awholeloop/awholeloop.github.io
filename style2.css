@@ -54,7 +54,7 @@ body {
 
   -o-animation: bg-scrolling-reverse 0.92s infinite;
 
-  animation: bg-scrolling-reverse 0.92s infinite;
+  animation: bg-scrolling-reverse 2s infinite;
 
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
