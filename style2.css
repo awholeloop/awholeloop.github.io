@@ -66,3 +66,9 @@ body::before {
   font-weight: 100;
   font-style: normal;
 }
+#next{
+  margin-top: 5em;
+  width: 200px;
+  height: 100px;
+  font-size: 50px;
+}
