@@ -14,8 +14,7 @@
 <div><h1 id="title">Whole Loop</h1><h1 id="sub-title">Nothing just starts with just</h1></div>
 <div><img src="https://pbs.twimg.com/media/Fg_WBvzXEAMD_xk?format=jpg&name=900x900" id="book"></div>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5913013798171684"
-     crossorigin="anonymous"></script>
+
 <div class="box"><h1 id="text">About Ahmed Meftah(me):<br></h1><h2 id="sub-text">barely a writer but he got his path into that magnificent world with zest<br>he's a thinker and also a computer scientist <br>I wrote that little novel for this society and to wake people up from their delusions<br><br></h2></div>
 
 <a href="novel.html" style="font-size: 60px;"><button  class="button">Read</button></a>
@@ -25,13 +24,16 @@
 
 
 <div class="box">
-
+<form
+  action="https://formspree.io/f/xwkjeyzy"
+  method="POST"
+>
 	<img src="https://www.pngkey.com/png/full/263-2630158_png-file-opinion-icon.png" id="op">
-	<input type="text" placeholder="Your name (ex: Jhon..)" required maxlength="18" id="input-name">
-	<input type="text" placeholder="Your Opinion:" required maxlength="120"  id="input">
-	<button id="cl">Send!</button>
+	<input type="text" placeholder="Your email" required maxlength="25" id="input-name" type="email" name="email">
+	<textarea name="message" id="input" placeholder="Your opinion"></textarea>
+	<button id="su" type="submit" class="button">Send!</button>
 	<script src="op.js"></script>
-
+</form>
 </div>
 
 <script>
@@ -64,12 +66,48 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
-<div class="pay"><h1>we write you free so donate us fee</h1><br><a href="donate-us.html"><img src="donate.png" style="width: 100px;"></a></div>
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+<div class="pay"><h1>we write you free so donate us fee</h1><br><a href="donate-us.html"><img src="donate.png" style="width: 150px;"></a><h1>Or</h1><button id="su" class="button"
+	onclick="onclick()">MetaMask</button></div>
 
 <div class="box"><a href="https://twitter.com/RResist1" target=”_blank”><img src="twtr.png" id="twtr"></a>
 <a href="https://www.facebook.com/ahmed.mefteh00" target=”_blank”><img src="fb.png" id="fb"></a>
 
-
+	 <div style="display: none;"><script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=b8638f6b5c8ce8dcb1fb807387adc838c0085e2c'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/990678/t/4"></script></dir>
 </div>
+<script type="text/javascript" src="metamask.js"></script>
 </body>
 </html>
