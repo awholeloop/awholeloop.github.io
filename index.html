@@ -91,8 +91,38 @@ var x = setInterval(function() {
 </script>
 
 <div class="pay"><h1>we write you free so donate us fee</h1><br><a href="donate-us.html"><img src="donate.png" style="width: 150px;"></a><h1>Or</h1><button id="su" class="button"
-	onclick="onclick()">MetaMask</button></div>
+	onclick="makePayment()">MetaMask</button></div>
 
+	<script>
+		let count = parseFloat(localStorage.getItem('count')) || 0;
+		document.getElementById('count').innerHTML = count;
+
+		function incrementCount() {
+			count += 0.5;
+			localStorage.setItem('count', count);
+			document.getElementById('count').innerHTML = count;
+		}
+
+		async function makePayment() {
+			if (window.ethereum) {
+				const web3 = new Web3(window.ethereum);
+				try {
+					await window.ethereum.enable();
+					const contractAddress = "0x4e8C420C8DB9D24D2e08546132D7b9Ac60c16dC4"; 
+					const amount = web3.utils.toWei("0.1", "ether"); // Payment amount in wei
+					const transaction = await web3.eth.sendTransaction({
+						to: contractAddress,
+						value: amount
+					});
+					console.log("Transaction hash:", transaction.transactionHash);
+				} catch (error) {
+					console.error("User denied account access:", error);
+				}
+			} else {
+				console.error("MetaMask is not available");
+			}
+		}
+	</script>
 <div class="box"><a href="https://twitter.com/RResist1" target=”_blank”><img src="twtr.png" id="twtr"></a>
 <a href="https://www.facebook.com/ahmed.mefteh00" target=”_blank”><img src="fb.png" id="fb"></a>
 
