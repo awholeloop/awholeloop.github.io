@@ -25,19 +25,25 @@
 
 <div class="box">
 <form
-  action="https://formspre7e.io/f/xwkjeyzy"
-method="POST" >
-	<img src="https://www.pngkey.com/png/full/263-2630158_png-file-opinion-icon.png" id="op">
-	<input type="text" placeholder="Your email" required maxlength="25" id="input-name" type="email" name="email">
-	<textarea name="message" id="input" placeholder="Your opinion"></textarea>
-	<button id="su" type="submit" class="button">Send!</button>
-	<script src="op.js"></script>
+  action="https://formspree.io/f/xwkjeyzy"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
 </form>
 </div>
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 07, 2023 00:00:00").getTime();
+var countDownDate = new Date("July 07, 2023 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
